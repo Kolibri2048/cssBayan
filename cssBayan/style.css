@@ -66,12 +66,12 @@ body {
     display: flex;
     justify-content: space-between;
     border-top: 0.2rem solid rgba(0, 0, 0, 0.3);
-    padding-right: 1rem;
+    padding: 1rem 1rem 0 0;
     
 }
 
 .arrow-img{
-    width: 2.5rem;
+    width: 1.5rem;
     object-fit: fill;
     visibility: hidden;
     
