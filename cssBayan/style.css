@@ -1,0 +1,173 @@
+*,
+::after,
+::before {
+    font-weight: 700;
+    box-sizing: border-box;
+}   
+
+body {
+    
+    margin: 0 auto;
+    max-width: 80rem;
+    font-size: 2rem;
+    
+}
+
+.wrapper{
+    height: 101vh;
+    padding: 0 1rem;
+}
+
+
+.h1{
+    color: black;
+
+}
+
+.accordion {
+    color: black;
+
+}
+
+
+
+.accordion:hover {
+    color: #c41919;
+}
+
+
+.accordion-item {
+    width: 100%;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.accordion-item__input {
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+    
+}
+
+.border-line_top{
+    display: block;
+    height: 0.3em;
+    width: 100%;
+    background-color: gray;
+    border-radius: 0.3em;
+    
+}
+
+
+.memArrow{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border-top: 0.2rem solid rgba(0, 0, 0, 0.3);
+    padding-right: 1rem;
+    
+}
+
+.arrow-img{
+    width: 2.5rem;
+    object-fit: fill;
+    visibility: hidden;
+    
+}
+
+.accordion:hover .arrow-img {
+    visibility: visible;
+}
+
+input:checked + label .memArrow .arrow-img {
+    transform: rotate(-45deg);
+    transition:All 1s ease;
+    
+}
+
+input:hover + label .memArrow .arrow-img {
+    transform: rotate(-45deg);
+    transition:All 1s ease;
+    
+}
+
+.accordion-item__trigger{
+    cursor: pointer;
+}
+
+.accordion-item__content {
+    display: flex;
+    justify-content: center;
+    border-top: none;
+    overflow: hidden;
+    height: 0;
+    
+
+    transition: 0.8s;
+    
+    
+    
+}
+
+
+
+.imgMem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    opacity: 1;
+    transition-duration: 0.5s;
+    transform: rotate(0deg);
+    
+}
+
+
+.accordion:hover .accordion-item__content img{
+    width: 20rem;
+}
+
+
+
+.accordion-item__input:checked ~ .accordion-item__trigger{
+   
+    
+}
+.accordion-item__input:checked ~ .accordion-item__content{
+    overflow: visible;
+    height: 25rem;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    
+    transition: height 1s ease-in-out;
+    
+    
+}
+
+.accordion-item__input:hover ~ .accordion-item__content{
+    overflow: visible;
+    height: 25rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    
+    transition: height 1s ease-in-out;
+    
+}
+
+input[id^=mem-]:checked~.img {
+    height: 25em;
+}
+
+input:focus {
+    background-color: rgb(123, 111, 97);
+  }
+
+.accordion-item__content:active {
+    background-color: #333;
+    border-color: #333;
+    cursor: grab;
+}
