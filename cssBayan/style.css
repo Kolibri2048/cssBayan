@@ -171,3 +171,43 @@ input:focus {
     border-color: #333;
     cursor: grab;
 }
+
+
+@media (max-width: 800px) {
+    span {
+        font-size: 1.7rem;
+    }
+
+    .wrapper {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    span {
+        font-size: 1rem;
+    }
+
+    .arrow-img{
+        width: 1rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .imgMem {
+        width: 15rem;
+    }
+
+    .accordion:hover .accordion-item__content img {
+        width: 17rem;
+    }
+
+    .memArrow {
+        padding-top: 1rem;
+        padding-right: 0rem;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
